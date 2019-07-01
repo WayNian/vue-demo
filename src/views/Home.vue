@@ -18,6 +18,6 @@ export default {
 <style lang="scss">
 .mavon-editor {
   width: 100%;
-  height: 90vh;
+  height: 86vh;
 }
 </style>
