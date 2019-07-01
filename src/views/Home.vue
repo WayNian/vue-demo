@@ -1,25 +1,23 @@
 <template>
-  <div>
-    <div class="hello">nihao</div>
-    <el-row>
-      <el-button>默认按钮</el-button>
-      <el-button type="primary">主要按钮</el-button>
-      <el-button type="success">成功按钮</el-button>
-      <el-button type="info">信息按钮</el-button>
-      <el-button type="warning">警告按钮</el-button>
-      <el-button type="danger">危险按钮</el-button>
-    </el-row>
-  </div>
+  <section class="main-container">
+    <mavon-editor class="mavon-editor" :ishljs="true" v-model="value" />
+  </section>
 </template>
 
 <script>
 export default {
-  name: "home",
-  components: {}
+  data() {
+    return {
+      value: ""
+    };
+  },
+  methods: {}
 };
 </script>
-<style lang="scss" scoped>
-.hello {
-  color: $cc;
+
+<style lang="scss">
+.mavon-editor {
+  width: 100%;
+  height: 90vh;
 }
 </style>
