@@ -1,13 +1,21 @@
 <template>
   <div>
     <el-header>
-      <el-button type="text">展开/收起</el-button>
+      <el-button type="text" @click="setCollapse">展开/收起</el-button>
     </el-header>
   </div>
 </template>
 
 <script>
-export default {};
+import { mapMutations } from "vuex";
+export default {
+  computed: {},
+  methods: {
+    ...mapMutations("setting", {
+      setCollapse: "setCollapse"
+    })
+  }
+};
 </script>
 
 <style lang="scss" scoped>

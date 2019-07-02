@@ -10,7 +10,4 @@
 export default {};
 </script>
 
-<style lang="scss" scoped>
-.main-layout {
-}
-</style>
+<style lang="scss" scoped></style>

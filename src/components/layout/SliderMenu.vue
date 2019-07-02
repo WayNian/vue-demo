@@ -1,8 +1,7 @@
 <template>
   <div>
-    <!-- <el-button @click="isCollapse = !isCollapse">展开</el-button> -->
     <el-menu
-      default-active="2"
+      :default-active="defActive"
       class="el-menu-vertical-demo"
       :collapse="isCollapse"
       background-color="#545c64"
@@ -19,6 +18,7 @@
   </div>
 </template>
 <script>
+import { mapState } from "vuex";
 import SliderItem from "./SliderItem";
 export default {
   components: {
@@ -26,7 +26,6 @@ export default {
   },
   data() {
     return {
-      isCollapse: false,
       navList: [
         {
           title: "首页",
@@ -52,6 +51,16 @@ export default {
         }
       ]
     };
+  },
+  computed: {
+    ...mapState("setting", {
+      isCollapse: "isCollapse"
+    }),
+    defActive() {
+      const path = this.$route.path;
+      console.log(path);
+      return path;
+    }
   },
   methods: {
     handleOpen(key, keyPath) {
