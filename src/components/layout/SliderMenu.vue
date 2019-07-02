@@ -58,7 +58,6 @@ export default {
     }),
     defActive() {
       const path = this.$route.path;
-      console.log(path);
       return path;
     }
   },
@@ -67,6 +66,8 @@ export default {
       console.log(key, keyPath);
     },
     handleClose(key, keyPath) {
+      // eslint-disable-next-line no-undef
+      new Bmap();
       console.log(key, keyPath);
     }
   }

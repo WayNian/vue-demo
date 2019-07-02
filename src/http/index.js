@@ -6,12 +6,8 @@ import QS from "qs";
 
 // 环境的切换
 if (process.env.NODE_ENV == "development") {
-  // axios.defaults.baseURL = "/api/";
-  // axios.defaults.baseURL = "http://test.medciot.com:1888/api/"; // 测试
-  // axios.defaults.baseURL = "http://test.medciot.com:1888/api/"; // 测试
-  axios.defaults.baseURL = "http://192.168.4.31/api/";
-  // axios.defaults.baseURL = "http://192.168.81.61:8080/api/";
-  // axios.defaults.baseURL = "http://192.168.4.9/api/";
+  // axios.defaults.baseURL = "https://www.wanandroid.com/";
+  axios.defaults.baseURL = "/api/";
 } else if (process.env.NODE_ENV == "debug") {
   axios.defaults.baseURL = "http://192.168.81.235:8848/api/";
 } else if (process.env.NODE_ENV == "production") {
@@ -39,7 +35,7 @@ axios.interceptors.request.use(
 // 响应拦截器
 axios.interceptors.response.use(
   response => {
-    return Promise.reject(response.data);
+    return Promise.resolve(response.data);
   },
   // 服务器状态码不是200的情况
   error => {
