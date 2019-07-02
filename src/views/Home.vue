@@ -1,23 +1,16 @@
 <template>
   <section class="main-container">
-    <mavon-editor class="mavon-editor" :ishljs="true" v-model="value" />
+    欢迎来到智能创作中心！
   </section>
 </template>
 
 <script>
 export default {
   data() {
-    return {
-      value: ""
-    };
+    return {};
   },
   methods: {}
 };
 </script>
 
-<style lang="scss">
-.mavon-editor {
-  width: 100%;
-  height: 86vh;
-}
-</style>
+<style lang="scss"></style>
